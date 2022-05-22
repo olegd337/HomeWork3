@@ -10,7 +10,8 @@
                Метод получает значение числа, умножает его на 5 и возвращает благодаря модификатору ref.  
                То есть, метод увеличивает самый аргумент в 5 раз.
             2. Даны координаты вершин треугольника и радиус круга. Определить площади фигур. (Использовать Out )
-            3. Дан целочисленный массив. Найти сумму и произведение всех элементов массива, которые стоят на четных местах. Массив передавать как params
+            3. Дан целочисленный массив. Найти сумму и произведение всех элементов массива, которые стоят на четных местах. 
+            Массив передавать как params
             */
 
             //Реализация метода, умножающего число на 5
@@ -19,6 +20,7 @@
             MultiplySomeNumber(ref input);
             Console.WriteLine($"Multiply to 5 will be: {input}");
             Console.WriteLine("=====================================================");
+
             //Определить площади фигур
             Console.WriteLine("Enter circle square:");
             var inputRadius = double.Parse(Console.ReadLine());
@@ -59,6 +61,25 @@
         {
             triangleSquare = 0.5 * ((triangleDots[0, 0] - triangleDots[2, 0]) * (triangleDots[1, 1] - triangleDots[2, 1])
                 - (triangleDots[1, 0] - triangleDots[2, 0]) * (triangleDots[0, 1] - triangleDots[2, 1]));
+        }
+
+        static int ArrayOddElementsSum(int[] array)
+        {
+            var arrayOddElementsSum = array[0];
+            for (int i = 0; i < array.Length; i += 2)
+            {
+                arrayOddElementsSum += array[i];
+            }
+            return arrayOddElementsSum;
+        }
+        static int ArrayOddElementsMultiply(int[] array)
+        {
+            var arrayOddElementsSum = array[0];
+            for (int i = 0; i < array.Length; i += 2)
+            {
+                arrayOddElementsSum += array[i];
+            }
+            return arrayOddElementsSum;
         }
 
 
